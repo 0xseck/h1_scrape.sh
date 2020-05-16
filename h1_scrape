@@ -1,0 +1,26 @@
+#!/bin/bash
+getProgs(){
+	curl -s -XPOST \
+		 -H 'Accept: */*' \
+		 -H 'X-Auth-Token: ----' \
+	         -H 'content-type: application/json' \
+	         --data-binary "`echo eyJvcGVyYXRpb25OYW1lIjoiRGlyZWN0b3J5UXVlcnkiLCJ2YXJpYWJsZXMiOnsid2hlcmUiOnsiX2FuZCI6W3siX29yIjpbeyJzdWJtaXNzaW9uX3N0YXRlIjp7Il9lcSI6Im9wZW4ifX0seyJzdWJtaXNzaW9uX3N0YXRlIjp7Il9lcSI6ImFwaV9vbmx5In19LHsiZXh0ZXJuYWxfcHJvZ3JhbSI6eyJpZCI6eyJfaXNfbnVsbCI6ZmFsc2V9fX1dfSx7ImV4dGVybmFsX3Byb2dyYW0iOnsiaWQiOnsiX2lzX251bGwiOnRydWV9fX0seyJfb3IiOlt7Il9hbmQiOlt7InN0YXRlIjp7Il9uZXEiOiJzYW5kYm94ZWQifX0seyJzdGF0ZSI6eyJfbmVxIjoic29mdF9sYXVuY2hlZCJ9fV19LHsiZXh0ZXJuYWxfcHJvZ3JhbSI6eyJpZCI6eyJfaXNfbnVsbCI6ZmFsc2V9fX1dfV19LCJmaXJzdCI6MTUwLCJzZWN1cmVPcmRlckJ5Ijp7InN0YXJ0ZWRfYWNjZXB0aW5nX2F0Ijp7Il9kaXJlY3Rpb24iOiJERVNDIn19fSwicXVlcnkiOiJxdWVyeSBEaXJlY3RvcnlRdWVyeSgkY3Vyc29yOiBTdHJpbmcsICRzZWN1cmVPcmRlckJ5OiBGaWx0ZXJzVGVhbUZpbHRlck9yZGVyLCAkd2hlcmU6IEZpbHRlcnNUZWFtRmlsdGVySW5wdXQpIHtcbiAgbWUge1xuICAgIGlkXG4gICAgZWRpdF91bmNsYWltZWRfcHJvZmlsZXNcbiAgICBoMV9wZW50ZXN0ZXJcbiAgICBfX3R5cGVuYW1lXG4gIH1cbiAgdGVhbXMoZmlyc3Q6IDE1MCwgYWZ0ZXI6ICRjdXJzb3IsIHNlY3VyZV9vcmRlcl9ieTogJHNlY3VyZU9yZGVyQnksIHdoZXJlOiAkd2hlcmUpIHtcbiAgICBwYWdlSW5mbyB7XG4gICAgICBlbmRDdXJzb3JcbiAgICAgIGhhc05leHRQYWdlXG4gICAgICBfX3R5cGVuYW1lXG4gICAgfVxuICAgIGVkZ2VzIHtcbiAgICAgIG5vZGUge1xuICAgICAgICBpZFxuICAgICAgICBib29rbWFya2VkXG4gICAgICAgIC4uLlRlYW1UYWJsZVJlc29sdmVkUmVwb3J0c1xuICAgICAgICAuLi5UZWFtVGFibGVBdmF0YXJBbmRUaXRsZVxuICAgICAgICAuLi5UZWFtVGFibGVMYXVuY2hEYXRlXG4gICAgICAgIC4uLlRlYW1UYWJsZU1pbmltdW1Cb3VudHlcbiAgICAgICAgLi4uVGVhbVRhYmxlQXZlcmFnZUJvdW50eVxuICAgICAgICBfX3R5cGVuYW1lXG4gICAgICB9XG4gICAgICBfX3R5cGVuYW1lXG4gICAgfVxuICAgIF9fdHlwZW5hbWVcbiAgfVxufVxuXG5mcmFnbWVudCBUZWFtVGFibGVSZXNvbHZlZFJlcG9ydHMgb24gVGVhbSB7XG4gIGlkXG4gIHJlc29sdmVkX3JlcG9ydF9jb3VudFxuICBfX3R5cGVuYW1lXG59XG5cbmZyYWdtZW50IFRlYW1UYWJsZUF2YXRhckFuZFRpdGxlIG9uIFRlYW0ge1xuICBpZFxuICBwcm9maWxlX3BpY3R1cmUoc2l6ZTogbWVkaXVtKVxuICBuYW1lXG4gIGhhbmRsZVxuICBzdWJtaXNzaW9uX3N0YXRlXG4gIHRyaWFnZV9hY3RpdmVcbiAgc3RhdGVcbiAgZXh0ZXJuYWxfcHJvZ3JhbSB7XG4gICAgaWRcbiAgICBfX3R5cGVuYW1lXG4gIH1cbiAgLi4uVGVhbUxpbmtXaXRoTWluaVByb2ZpbGVcbiAgX190eXBlbmFtZVxufVxuXG5mcmFnbWVudCBUZWFtTGlua1dpdGhNaW5pUHJvZmlsZSBvbiBUZWFtIHtcbiAgaWRcbiAgaGFuZGxlXG4gIG5hbWVcbiAgX190eXBlbmFtZVxufVxuXG5mcmFnbWVudCBUZWFtVGFibGVMYXVuY2hEYXRlIG9uIFRlYW0ge1xuICBpZFxuICBzdGFydGVkX2FjY2VwdGluZ19hdFxuICBfX3R5cGVuYW1lXG59XG5cbmZyYWdtZW50IFRlYW1UYWJsZU1pbmltdW1Cb3VudHkgb24gVGVhbSB7XG4gIGlkXG4gIGN1cnJlbmN5XG4gIGJhc2VfYm91bnR5XG4gIF9fdHlwZW5hbWVcbn1cblxuZnJhZ21lbnQgVGVhbVRhYmxlQXZlcmFnZUJvdW50eSBvbiBUZWFtIHtcbiAgaWRcbiAgY3VycmVuY3lcbiAgYXZlcmFnZV9ib3VudHlfbG93ZXJfYW1vdW50XG4gIGF2ZXJhZ2VfYm91bnR5X3VwcGVyX2Ftb3VudFxuICBfX3R5cGVuYW1lXG59XG4ifQo= | base64 -d `" \
+		    https://hackerone.com/graphql | jq -r '.[].teams.edges[].node.handle'
+
+}
+
+getScope(){
+
+	progName=${1:-$(</dev/stdin)}
+	curl -s -XPOST \
+		-H 'Accept: */*' \
+		-H 'X-Auth-Token: ----' \
+		-H 'Content-type: application/json' \
+		--data-binary '{"query":"query Team_assets($first_0:Int!) {query {id,...F0}} fragment F0 on Query {_teamP3KQB:team(handle:\"'$progName'\") {handle,_structured_scope_versions2ZWKHQ:structured_scope_versions(archived:false) {max_updated_at},_structured_scopes2qeKP8:structured_scopes(first:$first_0,archived:false,eligible_for_submission:true) {edges {node {id,asset_type,asset_identifier,rendered_instruction,max_severity,eligible_for_bounty},cursor},pageInfo {hasNextPage,hasPreviousPage}},_structured_scopes1wWN6h:structured_scopes(first:$first_0,archived:false,eligible_for_submission:false) {edges {node {id,asset_type,asset_identifier,rendered_instruction},cursor},pageInfo {hasNextPage,hasPreviousPage}},id},id}","variables":{"first_0":500}}' \
+		https://hackerone.com/graphql  | jq -r '.data[]._teamP3KQB._structured_scopes2qeKP8.edges[].node | select(.asset_type | contains("URL")) | .asset_identifier'
+
+}
+
+
+getProgs | while read prog; do echo $prog | getScope | sed 's~http[s]*://~~g' | sed 's/\/.*//g' | sed 's/\*[\.]*//g' ;done 
+
